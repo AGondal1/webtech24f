@@ -7,10 +7,17 @@
 
 	<style>
 	/* Your styles go here */
-	body{background-image:url(music.gif);
+	body{background-image:url(music-1.gif);
     background-position:center;
     background-repeat:repeat;
     background-attachment:fixed;}
+
+    p {text-align: center; border:1px solid red; }
+
+    img#b, h2 {position:absolute; top: 70%; left: 45%;}
+    h2 {color:yellow; font-weight:bold; z-index:1;}
+
+
 
     </style>
 
@@ -27,9 +34,14 @@
 <!-- Your HTML goes here-->
 <map name="middlesex" id="Middle">
     <area shape="rect" coords="328, 332, 380, 365" href="http://www.newtonma.gov" alt="City of Newton Website" />
-    <area shape="rect" coords="297, 359, 331, 379" href="http://www.welleslyma.gov" alt="City of Wellesley Website" />
+    <area shape="rect" coords="297, 359, 331, 379" href="http://www.wellesleyma.gov" alt="City of Wellesley Website" />
 </map>
+<p>
 <img src="Middlesex-1.gif" alt="Middlesex County Map" title="Middlesex MA" usemap="#middlesex"/>
+    </p>
+    <h2>Go Beavers</h2>
+    <img id="b" src="beaver.jpg" alt="Beaver Image" title="Babson Beavers"/>
+  
 
-</body>
+    </body>
 </html>
