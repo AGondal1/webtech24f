@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPL Guides - FPL Management and Analysis</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1A1A1A; /* Dark background */
+            color: #FFFFFF; /* White text */
+        }
+
+        #banner {
+            background-image: url('banner.jpg');
+            padding: 4%;
+            text-align: center;
+            background-color: #37003C; /* Premier League purple */
+        }
+
+        #heading {
+            color: #FFFFFF; /* White text */
+            font-weight: bold;
+        }
+
+        /* Navigation Menu */
+        .topnav {
+            background-color: #37003C; /* Premier League purple */
+            overflow: hidden;
+            font-family: 'Lucida Handwriting', cursive;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .topnav a {
+            color: #FFFFFF; /* White text */
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .topnav a:hover, .dropdown:hover .dropdownbutton {
+            background-color: #4B0082; /* Darker purple */
+            color: #FFFFFF; /* White text */
+        }
+
+        .active {
+            background-color: #4B0082; /* Darker purple */
+            color: #FFFFFF; /* White text */
+        }
+
+        .dropdown {
+            overflow: hidden;
+        }
+
+        .dropdown .dropdownbutton {
+            font-size: 1em;
+            border: none;
+            outline: none;
+            color: #FFFFFF; /* White text */
+            padding: 14px 20px;
+            background-color: inherit;
+            margin: 0;
+        }
+
+        .dropdowncontent {
+            display: none;
+            position: absolute;
+            background-color: #37003C; /* Premier League purple */
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdowncontent {
+            display: block;
+        }
+
+        .dropdowncontent a {
+            float: none;
+            display: block;
+            color: #FFFFFF; /* White text */
+            padding: 12px 16px;
+            text-decoration: none;
+            text-align: left;
+            font-size: 0.75em;
+        }
+
+        .dropdowncontent a:hover {
+            background-color: #4B0082; /* Darker purple */
+            color: #FFFFFF; /* White text */
+        }
+
+        .topnav .icon {
+            display: none;
+        }
+
+        /* Guides Content */
+        .guides {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #4B0082; /* Darker purple */
+            border-radius: 10px;
+            background-color: #2A2A2A; /* Dark grey background */
+        }
+
+        .guides h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #FFFFFF; /* White text */
+        }
+
+        .guides ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .guides ul ul {
+            list-style-type: circle;
+            padding-left: 20px;
+        }
+
+        .guides a {
+            color: #1E90FF; /* Dodger blue */
+            text-decoration: underline;
+        }
+
+        .guides a:hover {
+            color: #FFFFFF; /* White text */
+        }
+
+        /* Tips Content */
+        .tips {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #4B0082; /* Darker purple */
+            border-radius: 10px;
+            background-color: #2A2A2A; /* Dark grey background */
+        }
+
+        .tips h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #FFFFFF; /* White text */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #4B0082; /* Darker purple */
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #37003C; /* Premier League purple */
+        }
+
+        tr:nth-child(even) {
+            background-color: #2A2A2A; /* Dark grey background */
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 750px) {
+            .topnav a:not(:first-child), .dropdown .dropdownbutton {
+                display: none;
+            }
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+            .topnav.responsive {
+                position: relative;
+            }
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+            .topnav.responsive .dropdown {
+                float: none;
+            }
+            .topnav.responsive .dropdowncontent {
+                position: relative;
+            }
+            .topnav.responsive .dropdown .dropdownbutton {
+                display: block;
+                width: 100%;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="banner">
+        <h1 id="heading">FPL Management and Analysis</h1>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="topnav" id="mytopnav">
+        <a href="index.html">Home</a>
+        <a href="teamdeepdive.html">Team Deep Dive</a>
+        <a href="tips&guides.html">Tips & Guides</a>
+        <a href="opinioncolumn.html">Opinion Column</a>
+        <a href="contactus.html">Contact Us</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="sitemap.html">Sitemap</a>
+        <a href="credits.html">Credits</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">☰</a>
+    </div>
+
+    <!-- Guides Content -->
+    <div class="guides">
+        <h2>FPL Guides</h2>
+        <ul>
+            <li><a href="https://www.premierleague.com/news/1252542">How to Play FPL: A Beginner's Guide</a>
+                <ul>
+                    <li>Building a Squad</li>
+                    <li>Selecting Your Team</li>
+                    <li>Scoring Points</li>
+                    <li>Joining Leagues</li>
+                    <li>Making Transfers</li>
+                    <li>Using Chips</li>
+                </ul>
+            </li>
+            <li><a href="https://www.betterfpl.com/guides">Better FPL Guides</a>
+                <ul>
+                    <li>Team Selection Tips</li>
+                    <li>Budget Management</li>
+                    <li>Key Players to Target</li>
+                </ul>
+            </li>
+            <li><a href="https://www.fantasyfootballscout.co.uk/fantasy-premier-league-guides">Fantasy Football Scout Guides</a>
+                <ul>
+                    <li>Best FPL Tips</li>
+                    <li>Advice and Team News</li>
+                    <li>Player Picks</li>
+                </ul>
+            </li>
+            <li><a href="https://dotesports.com/fpl/news/how-to-play-fpl-a-beginners-guide">Dot Esports: How to Play FPL</a>
+                <ul>
+                    <li>Selecting a Team</li>
+                    <li>Making Transfers</li>
+                    <li>Player Prices</li>
+                    <li>Scoring Points</li>
+                    <li>Using Chips</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Tips Content -->
+    <div class="tips">
+        <h2>Current Premier League Standings</h2>
+        <table>
+                <tr>
+                    <th scope="col">Team</th>
+                    <th scope="col">PTS</th>
+                    <th scope="col">MP</th>
+                    <th scope="col">W</th>
+                    <th scope="col">L</th>
+                    <th scope="col">D</th>
+                    <th scope="col">GF</th>
+                    <th scope="col">GA</th>
+                    <th scope="col">GD</th>
+                </tr>
+                <tr>
+                    <td>Liverpool</td>
+                    <td>18</td>
+                    <td>7</td>
+                    <td>6</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>13</td>
+                    <td>2</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Man City</td>
+                    <td>17</td>
+                    <td>7</td>
+                    <td>5</td>
+                    <td>0</td>
+                    <td>2</td>
+                    <td>17</td>
+                    <td>8</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>Arsenal</td>
+                    <td>17</td>
+                    <td>7</td>
+                    <td>5</td>
+                    <td>0</td>
+                    <td>2</td>
+                    <td>15</td>
+                    <td>6</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>Chelsea</td>
+                    <td>14</td>
+                    <td>7</td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>16</td>
+                    <td>8</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>Aston Villa</td>
+                    <td>14</td>
+                    <td>7</td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>12</td>
+                    <td>9</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Brighton</td>
+                    <td>12</td>
+                    <td>7</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>13</td>
+                    <td>10</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Newcastle</td>
+                    <td>12</td>
+                    <td>7</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>8</td>
+                    <td>7</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Fulham</td>
+                    <td>11</td>
+                    <td>7</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>10</td>
+                    <td>8</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Tottenham</td>
+                    <td>10</td>
+                    <td>7</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>14</td>
+                    <td>8</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>Nottingham</td>
+                    <td>10</td>
+                    <td>7</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>7</td>
+                    <td>6</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Brentford</td>
+                    <td>10</td>
+                    <td>7</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>13</td>
+                    <td>13</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>West Ham</td>
+                    <td>8</td>
+                    <td>7</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>-1</td>
+                </tr>
+                <tr>
+                    <td>Bournemouth</td>
+                    <td>8</td>
+                    <td>7</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>8</td>
+                    <td>10</td>
+                    <td>-2</td>
+                </tr>
+                <tr>
+                    <td>Man Utd</td>
+                    <td>8</td>
+                    <td>7</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>8</td>
+                    <td>-3</td>
+                </tr>
+                <tr>
+                    <td>Leicester</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>9</td>
+                    <td>12</td>
+                    <td>-3</td>
+                </tr>
+                <tr>
+                    <td>Everton</td>
+                    <td>5</td>
+                    <td>7</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>7</td>
+                    <td>15</td>
+                    <td>-8</td>
+                </tr>
+                <tr>
+                    <td>Ipswich</td>
+                    <td>4</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>6</td>
+                    <td>14</td>
+                    <td>-8</td>
+                </tr>
+                <tr>
+                    <td>Crystal Palace</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>-5</td>
+                </tr>
+                <tr>
+                    <td>Southampton</td>
+                    <td>1</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>6</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>15</td>
+                    <td>-11</td>
+                </tr>
+                <tr>
+                    <td>Wolverhampton</td>
+                    <td>1</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>6</td>
+                    <td>1</td>
+                    <td>9</td>
+                    <td>21</td>
+                    <td>-12</td>
+                </tr>
+            </table>
+            

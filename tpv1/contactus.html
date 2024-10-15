@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - FPL Management and Analysis</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1A1A1A; /* Dark background */
+            color: #FFFFFF; /* White text */
+        }
+
+        #banner {
+            background-image: url('banner.jpg');
+            padding: 4%;
+            text-align: center;
+            background-color: #37003C; /* Premier League purple */
+        }
+
+        #heading {
+            color: #FFFFFF; /* White text */
+            font-weight: bold;
+        }
+
+        /* Navigation Menu */
+        .topnav {
+            background-color: #37003C; /* Premier League purple */
+            overflow: hidden;
+            font-family: 'Lucida Handwriting', cursive;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .topnav a {
+            color: #FFFFFF; /* White text */
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .topnav a:hover, .dropdown:hover .dropdownbutton {
+            background-color: #4B0082; /* Darker purple */
+            color: #FFFFFF; /* White text */
+        }
+
+        .active {
+            background-color: #4B0082; /* Darker purple */
+            color: #FFFFFF; /* White text */
+        }
+
+        .dropdown {
+            overflow: hidden;
+        }
+
+        .dropdown .dropdownbutton {
+            font-size: 1em;
+            border: none;
+            outline: none;
+            color: #FFFFFF; /* White text */
+            padding: 14px 20px;
+            background-color: inherit;
+            margin: 0;
+        }
+
+        .dropdowncontent {
+            display: none;
+            position: absolute;
+            background-color: #37003C; /* Premier League purple */
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdowncontent {
+            display: block;
+        }
+
+        .dropdowncontent a {
+            float: none;
+            display: block;
+            color: #FFFFFF; /* White text */
+            padding: 12px 16px;
+            text-decoration: none;
+            text-align: left;
+            font-size: 0.75em;
+        }
+
+        .dropdowncontent a:hover {
+            background-color: #4B0082; /* Darker purple */
+            color: #FFFFFF; /* White text */
+        }
+
+        .topnav .icon {
+            display: none;
+        }
+
+        /* Form Styles */
+        .contact-form {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #4B0082; /* Darker purple */
+            border-radius: 10px;
+            background-color: #2A2A2A; /* Dark grey background */
+        }
+
+        .contact-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #FFFFFF; /* White text */
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .contact-form .form-group div {
+            margin-bottom: 10px;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #4B0082; /* Darker purple */
+            border-radius: 5px;
+            background-color: #1A1A1A; /* Dark background */
+            color: #FFFFFF; /* White text */
+        }
+
+        .contact-form input[type="radio"],
+        .contact-form input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .contact-form button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4B0082; /* Darker purple */
+            color: #FFFFFF; /* White text */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #37003C; /* Premier League purple */
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 750px) {
+            .topnav a:not(:first-child), .dropdown .dropdownbutton {
+                display: none;
+            }
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+            .topnav.responsive {
+                position: relative;
+            }
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+            .topnav.responsive .dropdown {
+                float: none;
+            }
+            .topnav.responsive .dropdowncontent {
+                position: relative;
+            }
+            .topnav.responsive .dropdown .dropdownbutton {
+                display: block;
+                width: 100%;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="banner">
+        <h1 id="heading">FPL Management and Analysis</h1>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="topnav" id="mytopnav">
+        <a href="index.html">Home</a>
+        <a href="teamdeepdive.html">Team Deep Dive</a>
+        <a href="tips&guides.html">Tips & Guides</a>
+        <a href="opinioncolumn.html">Opinion Column</a>
+        <a href="contactus.html" class="active">Contact Us</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="sitemap.html">Sitemap</a>
+        <a href="credits.html">Credits</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">☰</a>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form action="submit_form.php" method="post">
+            <div class="form-group">
+                <div>Name:</div>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <div>Email:</div>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <div>Subject:</div>
+                <select id="subject" name="subject">
+                    <option value="general">General Inquiry</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="support">Support</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <div>Preferred Contact Method:</div>
+                <input type="radio" id="email_contact" name="contact_method" value="email">
+                <label for="email_contact">Email</label>
+                <input type="radio" id="phone_contact" name="contact_method" value="phone">
+                <label for="phone_contact">Phone</label>
+            </div>
+
+            <div class="form-group">
+                <div>Message:</div>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+</html>

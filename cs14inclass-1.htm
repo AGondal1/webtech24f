@@ -3,7 +3,7 @@
     <head>
 
 	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
-	    <title>Please change the title  </title>
+	    <title>Select your Leaf </title>
         <!-- Don't worry about the styles. I just added them to make the page look better -->
         <style type="text/css">
             h1 {
@@ -20,33 +20,51 @@
         <script type="text/javascript">
             function chgImg()
             {
-                var myimg;
-                myimg = document.getElementById ("a");
+                const myimg= document.getElementById ("a");
                 var myinp;
                 myinp= prompt("Enter one of maple, shamrock, thyme, or clover");
+                myinp= myinp.toLowerCase();
                 if (myinp == "maple")
                 {
                     myimg.src = "maple.jpg";
                     myimg.alt = "Maple Leaf";
                     myimg.title = "Majestic Maple";
                 }
+                else if (myinp == "shamrock")
                 {
                     myimg.src = "shamrock.jpg";
                     myimg.alt = "Shamrock Leaf";
                     myimg.title = "Super Shamrock";
                 }
+                else if (myinp == "thyme")
                 {
                     myimg.src = "thyme.jpg";
                     myimg.alt = "Thyme Leaf";
                     myimg.title = "Thirsty Thyme";
                 }
+                else if (myinp == "clover")
                 {
                     myimg.src = "clover.jpg";
                     myimg.alt = "Clover Leaf";
                     myimg.title = "Cool Clover";
                 }
+                else
+                {
+                    alert("You entered the wrong input")
+                }
             }
-               
+               function changePic()
+               {
+                const myimg = document.getElementById("daimg");
+                if (myimg2.src.match("planes=1.jpg") == "planes-1.jpg")
+                    {
+                        myimg2.src = "Ships-1.jpg";
+                    }
+                    else
+                    {
+                        myimg2.src = "planes-1.jpg";
+                    }
+               }
 
            
         </script>
@@ -81,7 +99,7 @@
             other image. The ALT and TITLE must change appropriately.
         </p></div>
         <div>
-            <img src="planes-1.jpg" alt="Planes" title="Flying High" width="200"/>
+            <img id="daimg" onclick="changePic()" src= planes-1.jpg alt="Planes" title="Flying High" width="200"/>
         </div>
     
     </body>

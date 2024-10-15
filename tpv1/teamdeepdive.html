@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Deep Dive - FPL Management and Analysis</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1A1A1A; /* Dark background */
+            color: #FFFFFF; /* White text */
+        }
+
+        #banner {
+            background-image: url('banner.jpg');
+            padding: 4%;
+            text-align: center;
+            background-color: #37003C; /* Premier League purple */
+        }
+
+        #heading {
+            color: #FFFFFF; /* White text */
+            font-weight: bold;
+        }
+
+        /* Navigation Menu */
+        .topnav {
+            background-color: #37003C; /* Premier League purple */
+            overflow: hidden;
+            font-family: 'Lucida Handwriting', cursive;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .topnav a {
+            color: #FFFFFF; /* White text */
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .topnav a:hover, .dropdown:hover .dropdownbutton {
+            background-color: #4B0082; /* Darker purple */
+            color: #FFFFFF; /* White text */
+        }
+
+        .active {
+            background-color: #4B0082; /* Darker purple */
+            color: #FFFFFF; /* White text */
+        }
+
+        .dropdown {
+            overflow: hidden;
+        }
+
+        .dropdown .dropdownbutton {
+            font-size: 1em;
+            border: none;
+            outline: none;
+            color: #FFFFFF; /* White text */
+            padding: 14px 20px;
+            background-color: inherit;
+            margin: 0;
+        }
+
+        .dropdowncontent {
+            display: none;
+            position: absolute;
+            background-color: #37003C; /* Premier League purple */
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdowncontent {
+            display: block;
+        }
+
+        .dropdowncontent a {
+            float: none;
+            display: block;
+            color: #FFFFFF; /* White text */
+            padding: 12px 16px;
+            text-decoration: none;
+            text-align: left;
+            font-size: 0.75em;
+        }
+
+        .dropdowncontent a:hover {
+            background-color: #4B0082; /* Darker purple */
+            color: #FFFFFF; /* White text */
+        }
+
+        .topnav .icon {
+            display: none;
+        }
+
+        /* Team Deep Dive Styles */
+        .team-deep-dive {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #4B0082; /* Darker purple */
+            border-radius: 10px;
+            background-color: #2A2A2A; /* Dark grey background */
+        }
+
+        .team-deep-dive h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #FFFFFF; /* White text */
+        }
+
+        .team {
+            margin-bottom: 20px;
+        }
+
+        .team h3 {
+            margin-bottom: 10px;
+            color: #FFFFFF; /* White text */
+        }
+
+        .team p {
+            margin-bottom: 10px;
+            color: #FFFFFF; /* White text */
+        }
+
+        .team a {
+            color: #1E90FF; /* Dodger blue */
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 750px) {
+            .topnav a:not(:first-child), .dropdown .dropdownbutton {
+                display: none;
+            }
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+            .topnav.responsive {
+                position: relative;
+            }
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+            .topnav.responsive .dropdown {
+                float: none;
+            }
+            .topnav.responsive .dropdowncontent {
+                position: relative;
+            }
+            .topnav.responsive .dropdown .dropdownbutton {
+                display: block;
+                width: 100%;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="banner">
+        <h1 id="heading">FPL Management and Analysis</h1>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="topnav" id="mytopnav">
+        <a href="index.html">Home</a>
+        <a href="teamdeepdive.html" class="active">Team Deep Dive</a>
+        <a href="tips&guides.html">Tips & Guides</a>
+        <a href="opinioncolumn.html">Opinion Column</a>
+        <a href="contactus.html">Contact Us</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="sitemap.html">Sitemap</a>
+        <a href="credits.html">Credits</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">☰</a>
+    </div>
+
+    <!-- Team Deep Dive -->
+    <div class="team-deep-dive">
+        <h2>Team Deep Dive</h2>
+
+        <div class="team">
+            <h3>Manchester United</h3>
+            <p>Manchester United, also known as the Red Devils, is one of the most successful clubs in English football history. Known for their attacking style of play and a rich history of winning trophies.</p>
+            <p><a onclick="openFPL('https://fplinsider.co.uk/Team/Man-Utd')">Click here to see Manchester United stats on FPL</a></p>
+        </div>
+
+        <div class="team">
+            <h3>Manchester City</h3>
+            <p>Manchester City, known as the Citizens, has become a dominant force in the Premier League in recent years. They are known for their possession-based style of play and have won multiple league titles.</p>
+            <p><a onclick="openFPL('https://fplinsider.co.uk/Team/Man-City')">Click here to see Manchester City stats on FPL</a></p>
+        </div>
+
+        <div class="team">
+            <h3>Liverpool</h3>
+            <p>Liverpool, also known as the Reds, has a storied history and a passionate fan base. They are known for their high-intensity pressing game and have won numerous domestic and international trophies.</p>
+            <p><a onclick="openFPL('https://fplinsider.co.uk/Team/Liverpool')">Click here to see Liverpool stats on FPL</a></p>
+        </div>
+
+        <div class="team">
+            <h3>Chelsea</h3>
+            <p>Chelsea, known as the Blues, has been a major player in English football since the early 2000s. They are known for their strong defensive play and have won multiple Premier League titles and European trophies.</p>
+            <p><a onclick="openFPL('https://fplinsider.co.uk/Team/Chelsea')">Click here to see Chelsea stats on FPL</a></p>
+        </div>
+
+        <div class="team">
+            <h3>Arsenal</h3>
+            <p>Arsenal, also known as the Gunners, is known for their attractive, attacking style of play. They have a rich history and have won numerous league titles and FA Cups.</p>
+            <p><a onclick="openFPL('https://fplinsider.co.uk/Team/Arsenal')">Click here to see Arsenal stats on FPL</a></p>
+        </div>
+
+        <div class="team">
+            <h3>Tottenham Hotspur</h3>
+            <p>Tottenham Hotspur, known as Spurs, is known for their exciting, attacking football. They have a strong fan base and have been competitive in both domestic and European competitions.</p>
+            <p><a onclick="openFPL('https://fplinsider.co.uk/Team/Spurs')">Click here to see Tottenham Hotspur stats on FPL</a></p>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        function openFPL(url) {
+            window.open(url, 'FPL Stats', 'width=800,height=600');
+        }
+    </script>
+</body>
+</html>
