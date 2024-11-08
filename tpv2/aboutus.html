@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - FPL Management and Analysis</title>
+    <meta name="description" content="Learn more about Aaryan Gondal, the creator of FPL Management and Analysis, and discover the mission behind the site.">
+    <meta name="keywords" content="About Us, FPL Management, Aaryan Gondal, Fantasy Premier League, tech entrepreneurship">
+    <link rel="stylesheet" href="fplstyles.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <div id="banner">
+        <h1 id="heading">FPL Management and Analysis</h1>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="topnav" id="mytopnav">
+        <a href="index.html">Home</a>
+        <a href="teamdeepdive.html">Team Deep Dive</a>
+        <div class="dropdown">
+            <button class="dropdownbutton">Tips & Guides</button>
+            <div class="dropdowncontent">
+                <a href="tips.html">Tips</a>
+                <a href="guides.html">Guides</a>
+            </div>
+        </div>
+        <a href="opinioncolumn.html">Opinion Column</a>
+        <a href="contactus.html">Contact Us</a>
+        <a href="aboutus.html" class="active">About Us</a>
+        <a href="sitemap.html">Sitemap</a>
+        <a href="credits.html">Credits</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">☰</a>
+    </div>
+
+    <div class="about-us">
+        <img src="aaryangondal.jpg" alt="Aaryan Gondal" class="about-image" usemap="#image-map">
+        <map name="image-map">
+            <area target="" alt="Spotify" title="Spotify" href="https://open.spotify.com/user/8f5voxaud9iojfkgpzs47k4go" coords="107,60,262,208" shape="rect">
+            <area target="" alt="Linktree" title="Linktree" href="https://linktr.ee/aaryangondal" coords="118,258,372,392" shape="rect">
+        </map>
+        <h2>About Aaryan Gondal</h2>
+        <p>Hi, I'm Aaryan Gondal, a junior at Babson College concentrating in tech entrepreneurship and marketing. I'm a tech enthusiast with a keen interest in the Web3 and AI space. Home for me is Mumbai, India.</p>
+        <p>Outside of academics, I have a range of interests including Formula 1, soccer, cricket, and much more. I started this page because I remember being so confused about FPL when I first started over 6 years ago. As I've played more and learned through online resources and friends, I felt it would be great to create a website that can similarly inform others.</p>
+        <p>Click on my face to view my Spotify account and see what music I like listening to!</p>
+        <p>Click on my body to view my Linktree so you can have access to all my socials!</p>
+    </div>
+
+    <script type="text/javascript">
+        function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+</html>

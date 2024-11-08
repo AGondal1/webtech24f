@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opinion Column - FPL Management and Analysis</title>
+    <meta name="description" content="Explore insightful opinions and strategies for Fantasy Premier League management. Get tips from FPL enthusiasts and analysts.">
+    <meta name="keywords" content="Fantasy Premier League, FPL opinions, football analysis, FPL strategies, FPL tips">
+    <link rel="stylesheet" href="fplstyles.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <div id="banner">
+        <h1 id="heading">FPL Management and Analysis</h1>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="topnav" id="mytopnav">
+        <a href="index.html">Home</a>
+        <a href="teamdeepdive.html">Team Deep Dive</a>
+        <div class="dropdown">
+            <button class="dropdownbutton">Tips & Guides</button>
+            <div class="dropdowncontent">
+                <a href="tips.html">Tips</a>
+                <a href="guides.html">Guides</a>
+            </div>
+        </div>
+        <a href="opinioncolumn.html" class="active">Opinion Column</a>
+        <a href="contactus.html">Contact Us</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="sitemap.html">Sitemap</a>
+        <a href="credits.html">Credits</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">☰</a>
+    </div>
+
+    <div class="opinion-column">
+        <h2>Opinion Column</h2>
+
+        <div class="opinion">
+            <h3>Why Midfielders are the Key to FPL Success</h3>
+            <p>Midfielders often provide the best value for money in FPL. They score goals, provide assists, and earn clean sheet points. Investing in top-performing midfielders can significantly boost your team's performance.</p>
+        </div>
+
+        <div class="opinion">
+            <h3>The Importance of Fixture Planning</h3>
+            <p>Planning your transfers around favorable fixtures is crucial. Look ahead at the fixture list and target players from teams with a run of easy games. This strategy can help you maximize points over several gameweeks.</p>
+        </div>
+
+        <div class="opinion">
+            <h3>Captaincy Choices: Risk vs. Reward</h3>
+            <p>Choosing the right captain can make or break your gameweek. While it's tempting to always captain the highest-scoring player, sometimes taking a risk on a differential can pay off big time.</p>
+        </div>
+
+        <div class="opinion">
+            <h3>To Triple Captain Or Not To</h3>
+            <p>Triple Captaining any player during a game week is often daunting given that it is a chip you only get to play once during the season. You can sit and strategize all you want, but at the end of the day it is simply just an informed risk you take. I believe that when it comes to triple captaining a player you go with your gut feeling.</p>
+            <p class="toggle-image" onclick="toggleImage('tripleCaptain')">Click to see points when you triple captain a player</p>
+            <div id="tripleCaptain" class="image-container">
+                <img src="triple-captain-points.jpg" alt="Triple Captain Points">
+            </div>
+            <p class="toggle-image" onclick="toggleImage('noTripleCaptain')">Click to see points when you don't triple captain a player</p>
+            <div id="noTripleCaptain" class="image-container">
+                <img src="no-triple-captain-points.jpg" alt="No Triple Captain Points">
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        function toggleImage(id) {
+            var imgContainer = document.getElementById(id);
+            if (imgContainer.style.display === "none" || imgContainer.style.display === "") {
+                imgContainer.style.display = "block";
+            } else {
+                imgContainer.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

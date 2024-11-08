@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap - FPL Management and Analysis</title>
+    <meta name="description" content="Explore the sitemap for FPL Management and Analysis. Find links to all sections of the site, including tips, guides, and contact information.">
+    <meta name="keywords" content="Sitemap, Fantasy Premier League, FPL management, site navigation, tips and guides">
+    
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #1A1A1A; /* Dark background */
+            color: #FFFFFF; /* White text */
+        }
+        h1 {
+            text-align: center;
+            color: #1E90FF; /* Dodger blue */
+            margin-bottom: 20px;
+        }
+        img {
+            width: 100px; /* Soccer ball size */
+            position: absolute;
+            left: 0px; /* Initial position */
+            top: 150px; /* Position under the title */
+        }
+        #net {
+            position: absolute;
+            right: 0; /* Position the net on the right */
+            top: 100px; /* Align with the ball */
+            width: 100px; /* Adjust width as needed */
+            height: 100px; /* Adjust height as needed */
+            background-image: url('net.jpg'); /* Replace with your net image */
+            background-size: cover; /* Ensure the image covers the div */
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #2A2A2A; /* Dark grey background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            border-bottom: 1px solid #4B0082; /* Darker purple */
+        }
+        li:last-child {
+            border-bottom: none; /* Remove border from last item */
+        }
+        a {
+            color: #1E90FF; /* Dodger blue */
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #FFFFFF; /* White text on hover */
+        }
+        button {
+            position: relative;
+            display: block;
+            margin: 20px auto; /* Center the button */
+            padding: 10px 20px;
+            background-color: #4B0082; /* Darker purple */
+            color: #FFFFFF; /* White text */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1E90FF; /* Change color on hover */
+        }
+    </style>
+    
+    <script>
+        /* JavaScript for animation */
+        var pos = 0;
+        var flystatus = 0, mytimer;
+
+        function flyBall() {
+            var myball = document.getElementById("soccerball");
+            flystatus = 1;
+            myball.style.left = pos + "px";
+            pos = pos + 1; /* Move the ball to the right */
+            if (pos > 5000) {
+                pos = 0; // Reset position if it goes off screen
+            }
+            mytimer = setTimeout(flyBall, 5);
+        }
+
+        function startStop() {
+            if (flystatus == 0) {
+                mytimer = setTimeout(flyBall, 5);
+            } else {
+                clearTimeout(mytimer);
+                flystatus = 0;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Sitemap</h1>
+    <img id="soccerball" src="soccerball.png" alt="Soccer Ball" title="Soccer Ball"/>
+    <div id="net"></div> <!-- Net element -->
+    <div class="container">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="teamdeepdive.html">Team Deep Dive</a></li>
+            <li><a href="tips&guides.html">Tips & Guides</a></li>
+            <li><a href="opinioncolumn.html">Opinion Column</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+            <li><a href="credits.html">Credits</a></li>
+        </ul>
+    </div>
+    <button onclick="startStop()">Start/Stop</button>
+</body>
+</html>
