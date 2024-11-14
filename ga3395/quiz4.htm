@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Color Mixer Quiz 4</title><!-- Minus 1 if not filled -->
+
+	<style>
+	/* Your styles go here */
+    form { width:50%; margin-right:auto; margin-left:auto; padding-left:5%;
+           background-color:silver; padding-top:5%; padding-bottom:5%;}
+	textarea {border:3px ridge red;}
+		
+	</style>
+    <script type="text/javascript">
+        function mixColors(event) {
+            event.preventDefault();
+            const color1 = document.getElementById("color1").value;
+            const color2 = document.getElementById("color2").value;
+            const palette = document.getElementById("pallette");
+
+            if (color1 === "null" && color2 === "null") {
+                alert("Please select a color from both lists.");
+                return;
+            } else if (color1 === "null") {
+                alert("Please select a color from the first list.");
+                return;
+            } else if (color2 === "null") {
+                alert("Please select a color from the second list.");
+                return;
+            }
+
+            let mixedColor;
+            if (color1 === "green" && color2 === "red") {
+                mixedColor = "brown";
+            } else if (color1 === "green" && color2 === "yellow") {
+                mixedColor = "green";
+            } else if (color1 === "yellow" && color2 === "red") {
+                mixedColor = "orange";
+            } else if (color1 === "yellow" && color2 === "blue") {
+                mixedColor = "green";
+            } else if (color1 === "green" && color2 === "blue") {
+                mixedColor = "cyan";
+            }
+
+            palette.style.backgroundColor = mixedColor;
+        }
+    </script>
+</head>
+<body>
+    <form method="POST" action="">
+        <p>
+            <select id="color1" name="color1">
+                <option value="null">Select Color One</option>
+                <option value="green">Green</option>
+                <option value="yellow">Yellow</option>
+            </select> 
+            <select id="color2" name="color2">
+                <option value="null">Select Color Two</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+            </select> 
+        </p>
+        <p>
+            <textarea id="pallette" name="pallette" style="border: 2px solid red; width: 300px; height: 100px;"></textarea>
+        </p>
+        <p>
+            <input type="submit" name="submit" value="SHOW" onclick="mixColors(event)"/> 
+            <input type="reset" name="reset" value="NO"/>
+        </p>
+    </form>
+</body>
+</html>
