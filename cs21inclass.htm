@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title></title>
+
+	<style>
+    /* Your styles go here */
+    </style>
+
+    <script type="text/javascript">
+        function showMe()
+        {
+            const myrpod = document.querySelector('input[name="prod"]').value.trim().toLowerCase();
+            const myqty = document.forms["f"]["qty"].value;
+            /*const myqty = document.forms[0]["qty"].value;*/
+            var mmyamtdue = document.forms["f"]["amtdue"];
+            const pricelist = {car:35000, mocycle:15000, cycle:5000};
+            const myset = ["car", "mocycle", "cycle"]
+            /*if (!myset.includes(myprod))
+            if (!myprod in myset)*/
+
+             if (isNaN(myqty) || !(myqty))
+                {
+                   alert("Please enter a valid value for quantity");
+                   return; 
+                }
+               
+             if (!(myprod in pricelist))
+             {
+                alert("Please enter a valid product");
+             }
+             else
+             {
+                let amt;
+
+                amt = myqty * pricelist[myprod];
+                myqty = parseInt(myqty);
+                event.preventDefault()
+                myamtdue.value= "$" + amt.toFixed(3);
+
+                alert (pricelist[myprod]);
+             }
+        }
+		/*triple ==== means that type and number both match, while == is just a value match. */
+	</script>
+  </head>
+<body>
+    <form id="f" method="POST" action="" onsubmit="showMe(event)">
+        <p>
+            Product:   <input type="text" name="prod" size="10"/>
+        </p>
+        <p>
+            Quantity:   <input type="text" name="qty" size="10"/>
+        </p>
+        <p>
+            Amount Due:   <input type="text" name="amtdue" size="10" readonly/>
+        </p>
+        <p>
+            <input type="submit" name="submit" value="Show Me"/>
+            <input type="reset" name="reset" value="Clear Me"/> <!-- Changed to reset -->
+        </p>
+    </form>
+</body>
+</html>
