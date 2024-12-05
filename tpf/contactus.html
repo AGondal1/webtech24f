@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - FPL Management and Analysis</title>
+    <meta name="description" content="Get in touch with us for any inquiries, feedback, or support regarding Fantasy Premier League management. We are here to help!">
+    <meta name="keywords" content="Contact, Fantasy Premier League, FPL support, feedback, inquiries">
+    <link rel="stylesheet" href="fplstyles.css"> <!-- Link to external CSS -->
+    <meta name="author" content="Aaryan Gondal">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1A1A1A; 
+            color: #FFFFFF; 
+        }
+
+        #banner {
+            background-image: url('banner.jpg');
+            padding: 4%;
+            text-align: center;
+            background-color: #37003C; 
+        }
+
+        #heading {
+            color: #FFFFFF; 
+            font-weight: bold;
+        }
+    </style>
+    
+    <script type="text/javascript" defer>
+        function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        function validateForm(event) {
+            event.preventDefault(); 
+            
+            var form = document.getElementById("contactForm");
+            var name = form.name.value.trim();
+            var email = form.email.value.trim();
+            var subject = form.subject.value;
+            var contactMethod = form.contact_method.value;
+            var message = form.message.value.trim();
+
+            if (name === "") {
+                alert("Please enter your name.");
+                return false;
+            }
+
+            if (email === "") {
+                alert("Please enter your email.");
+                return false;
+            }
+
+            if (subject === "XXX") {
+                alert("Please select a subject.");
+                return false;
+            }
+
+            if (!contactMethod) {
+                alert("Please select a preferred contact method.");
+                return false;
+            }
+
+            if (message === "") {
+                alert("Please enter your message.");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            form.submit();
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("heading").onmouseover = function() {
+                this.style.color = "gold";
+            };
+
+            document.getElementById("heading").onclick = function() {
+                this.textContent = "Fantasy Premier League (FPL) has over 11 million players worldwide";
+            };
+        });
+    </script>
+</head>
+<body>
+    <div id="banner">
+        <h1 id="heading">FPL Management and Analysis</h1>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="topnav" id="mytopnav">
+        <a href="index.html">Home</a>
+        <a href="teamdeepdive.html">Team Deep Dive</a>
+        <div class="dropdown">
+            <button class="dropdownbutton">Tips & Guides</button>
+            <div class="dropdowncontent">
+                <a href="tips.html">Tips</a>
+                <a href="guides.html">Guides</a>
+            </div>
+        </div>
+        <a href="opinioncolumn.html">Opinion Column</a>
+        <a href="contactus.html" class="active">Contact Us</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="sitemap.html">Sitemap</a>
+        <a href="credits.html">Credits</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">☰</a>
+    </div>
+
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form id="contactForm" action="submit_form.php" method="post" onsubmit="validateForm(event)">
+            <div class="form-group">
+                <div>Name:</div>
+                <input type="text" id="name" name="name">
+            </div>
+    
+            <div class="form-group">
+                <div>Email:</div>
+                <input type="email" id="email" name="email">
+            </div>
+    
+            <div class="form-group">
+                <div>Subject:</div>
+                <select id="subject" name="subject">
+                    <option value="XXX">Select a subject</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="support">Support</option>
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <div>Preferred Contact Method:</div>
+                <input type="radio" id="email_contact" name="contact_method" value="email">
+                <label for="email_contact">Email</label>
+                <input type="radio" id="phone_contact" name="contact_method" value="phone">
+                <label for="phone_contact">Phone</label>
+            </div>
+    
+            <div class="form-group">
+                <div>Message:</div>
+                <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+    
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>

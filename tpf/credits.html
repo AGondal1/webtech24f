@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credits - FPL Management and Analysis</title>
+    <meta name="description" content="Acknowledgments and credits for resources used in the FPL Management and Analysis project.">
+    <meta name="keywords" content="Credits, Fantasy Premier League, FPL resources, acknowledgments">
+    <link rel="stylesheet" href="fplstyles.css"> <!-- Link to external CSS -->
+    <meta name="author" content="Aaryan Gondal">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1A1A1A; 
+            color: #FFFFFF; 
+        }
+
+        #banner {
+            background-image: url('banner.jpg');
+            padding: 4%;
+            text-align: center;
+            background-color: #37003C; 
+        }
+
+        #heading {
+            color: #FFFFFF; 
+            font-weight: bold;
+        }
+
+        div#slider {
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 20px;
+            width: 400px;
+        }
+
+        div#slider img {
+            width: 100%;
+            border: 2px solid #FFFFFF;
+        }
+
+        .animate-typing {
+            text-align: center;
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+    </style>
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.cycle.all.js"></script>
+    <script type="text/javascript" src="jquery.easing.js"></script>
+    <script type="text/javascript" defer>
+        function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        $(function() {
+            $('#slider').cycle({
+                fx: 'shuffle',
+                shuffle: { top: 230, left: 230 },
+                easing: 'easeOutBack',
+                delay: -4000
+            });
+
+            $(".animate-typing").animateTyping({
+                typeSpeed: 200,
+                typeDelay: 200,
+                removeSpeed: 50,
+                removeDelay: 500,
+                animateLoop: true
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("heading").onmouseover = function() {
+                this.style.color = "gold";
+            };
+
+            document.getElementById("heading").onclick = function() {
+                this.textContent = "The winner of FPL receives a 7-night break in the UK with VIP hospitality at two 2025/26 Premier League matches";
+            };
+        });
+    </script>
+</head>
+<body>
+    <div id="banner">
+        <h1 id="heading">Credits</h1>
+    </div>
+    
+    <!-- Navigation Menu -->
+    <div class="topnav" id="mytopnav">
+        <a href="index.html">Home</a>
+        <a href="teamdeepdive.html">Team Deep Dive</a>
+        <div class="dropdown">
+            <button class="dropdownbutton">Tips & Guides</button>
+            <div class="dropdowncontent">
+                <a href="tips.html">Tips</a>
+                <a href="guides.html">Guides</a>
+            </div>
+        </div>
+        <a href="opinioncolumn.html">Opinion Column</a>
+        <a href="contactus.html">Contact Us</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="sitemap.html">Sitemap</a>
+        <a href="credits.html" class="active">Credits</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">☰</a>
+    </div>
+
+    <div class="content">
+        <div class="animate-typing"
+             data-type-speed="200"
+             data-type-delay="200"
+             data-remove-speed="50"
+             data-remove-delay="500"
+             data-animate-loop="true">
+            Below are two images. One of my favourite football player Lionel Messi and the other of my favourite football club.
+        </div>
+        <div id="slider">
+            <img src="barca.jpg" alt="FC Barcelona" title="FC Barcelona">
+            <img src="messi.jpg" alt="Lionel Messi" title="Lionel Messi">
+        </div>
+        <script type="text/javascript" src="jquery.animateTyping.js"></script>
+        <h2>Honors Code Statement</h2>
+        <p>
+            I Aaryan Gondal pledge my honor that I have neither received nor provided unauthorized assistance during the completion of this work. I have read the term project instructions and have observed all the restrictions and limitations specified therein.
+        </p>
+
+        <h2>Credits</h2>
+        <ul>
+            <li>Images: 
+                <ul>
+                    <li><a href="https://www.premierleague.com/" target="_blank">Premier League Website</a> - Images sourced from the official FPL website.</li>
+                    <li><a href="https://similarpng.com/3d-soccer-ball-on-transparent-background-png/" target="_blank">Soccer Ball Image</a> - Image sourced from Google.</li>
+                    <li><a href="https://www.shutterstock.com/search/soccer-goal-side-view" target="_blank">Soccer Net Image</a> - Image sourced from Google.</li>
+                </ul>
+            </li>
+            <li>Videos: <a href="https://www.youtube.com/embed/-7wWXk7QogI?si=U-1gYVSOi7_uDMIT" target="_blank">FPL Management Video</a></li>
+            <li>Music: <a href="premierleague.mp3" target="_blank">Premier League Theme</a></li>
+            <li>Text Content: 
+                <ul>
+                    <li><a href="https://fplinsider.co.uk/Team" target="_blank">FPL Insider</a></li>
+                    <li><a href="https://dotesports.com/fpl/news/how-to-play-fpl-a-beginners-guide" target="_blank">Dot Esports: How to Play FPL</a></li>
+                    <li><a href="https://www.fantasyfootballscout.co.uk/fantasy-premier-league-guides" target="_blank">Fantasy Football Scout Guides</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

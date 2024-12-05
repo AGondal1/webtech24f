@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPL Management and Analysis - Team Deep Dive</title>
+    <meta name="description" content="Explore in-depth analysis and management tips for top Premier League teams.">
+    <meta name="keywords" content="FPL Management, Fantasy Premier League, Team Analysis, Manchester United, Manchester City, Liverpool, Chelsea, Arsenal, Tottenham Hotspur, Premier League Tips, Football Stats, Team Performance, Fantasy Football Insights">
+    <link rel="stylesheet" href="fplstyles.css"> <!-- Link to external CSS -->
+    <meta name="author" content="Aaryan Gondal">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1A1A1A; 
+            color: #FFFFFF; 
+        }
+
+        #banner {
+            background-image: url('banner.jpg');
+            padding: 4%;
+            text-align: center;
+            background-color: #37003C; 
+        }
+
+        #heading {
+            color: #FFFFFF; 
+            font-weight: bold;
+        }
+        p, h3 {text-align:center;}
+        img {width:40%; max-width: 800px; border:5px ridge red; display: block; margin: 0 auto;}
+        button {width:150px; height:40px; 
+                background-color:green; font-family:arial; 
+                color:yellow;}
+        div#b{text-align:center;}
+    </style>
+                    <script type="text/javascript" defer>
+                        function myFunction() {
+                            var x = document.getElementById("mytopnav");
+                            if (x.className === "topnav") {
+                                x.className += " responsive";
+                            } else {
+                                x.className = "topnav";
+                            }
+                        }
+                
+                        document.addEventListener("DOMContentLoaded", function() {
+                            document.getElementById("heading").onmouseover = function() {
+                                this.style.color = "gold";
+                            };
+                
+                            document.getElementById("heading").onclick = function() {
+                                this.textContent = "Players often come up with creative names for their teams that incorporate football references";
+                            };
+                        });
+        
+                        var myimages = ["salah.jpeg", "haaland.jpeg", "son.jpeg", "fernandes.jpg", "palmer.jpg", "saka.jpg"];
+        var counter = 0;
+        var interval;
+
+        function showSlides() {
+            var imgElement = document.getElementById("playerImg");
+            imgElement.src = myimages[counter];
+            counter = (counter + 1) % myimages.length;
+        }
+
+        function startStopSlides() {
+            var button = document.getElementById("startStopButton");
+            if (button.textContent === "Start") {
+                interval = setInterval(showSlides, 2000);
+                button.textContent = "Stop";
+            } else {
+                clearInterval(interval);
+                button.textContent = "Start";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="banner">
+        <h1 id="heading">FPL Management and Analysis</h1>
+    </div>
+    
+    <!-- Navigation Menu -->
+    <nav class="topnav" id="mytopnav">
+        <a href="index.html">Home</a>
+        <a href="teamdeepdive.html">Team Deep Dive</a>
+        <div class="dropdown">
+            <button class="dropdownbutton">Tips & Guides</button>
+            <div class="dropdowncontent">
+                <a href="tips.html">Tips</a>
+                <a href="guides.html">Guides</a>
+            </div>
+        </div>
+        <a href="opinioncolumn.html">Opinion Column</a>
+        <a href="contactus.html">Contact Us</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="sitemap.html">Sitemap</a>
+        <a href="credits.html">Credits</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">☰</a>
+    </nav>
+
+    <main class="team-deep-dive">
+        <h2>Team Deep Dive</h2>
+
+        <article class="team">
+            <h3>Manchester United</h3>
+            <p>Manchester United, also known as the Red Devils, is one of the most successful clubs in English football history. Known for their attacking style of play and a rich history of winning trophies, they continue to be a formidable force in the Premier League.</p>
+            <p><strong>Key Players:</strong> Bruno Fernandes, Marcus Rashford, and Casemiro are pivotal to the team's success, providing creativity, goals, and leadership. The team is also focusing on integrating young talents to build for the future.</p>
+            <p><a onclick="openFPL('https://fplinsider.co.uk/Team/Man-Utd')">View Manchester United stats on FPL</a></p>
+        </article>
+
+        <article class="team">
+            <h3>Manchester City</h3>
+            <p>Manchester City, known as the Citizens, has become a dominant force in the Premier League in recent years. They are known for their possession-based style of play and have won multiple league titles, showcasing their depth and tactical flexibility.</p>
+            <p><strong>Key Players:</strong> Erling Haaland, Kevin De Bruyne, and Rodri are essential, with Haaland leading the attack and De Bruyne orchestrating the midfield. City's ability to rotate players without losing quality makes them a nightmare for opponents.</p>
+            <p><a onclick="openFPL('https://fplinsider.co.uk/Team/Man-City')">View Manchester City stats on FPL</a></p>
+        </article>
+
+        <article class="team">
+            <h3>Liverpool</h3>
+            <p>Liverpool, also known as the Reds, has a storied history and a passionate fan base. They are known for their high-intensity pressing game and have won numerous domestic and international trophies, making them perennial contenders.</p>
+            <p><strong>Key Players:</strong> Mohamed Salah, Virgil van Dijk, and Alisson Becker are crucial, with Salah providing goals and Van Dijk anchoring the defense. The team's attacking style is complemented by a solid defensive unit, making them well-rounded.</p>
+            <p><a onclick="openFPL('https://fplinsider.co.uk/Team/Liverpool')">View Liverpool stats on FPL</a></p>
+        </article>
+
+        <article class="team">
+            <h3>Chelsea</h3>
+            <p>Chelsea, known as the Blues, has been a major player in English football since the early 2000s. They are known for their strong defensive play and have won multiple Premier League titles and European trophies, with a focus on rebuilding under new management.</p>
+            <p><strong>Key Players:</strong> Cole Palmer, Enzo Fernández, and Mykhailo Mudryk are key contributors, with Palmer showcasing his talent in attack and Fernández controlling the midfield. Chelsea's youth academy continues to produce exciting prospects that bolster the squad.</p>
+            <p><a onclick="openFPL('https://fplinsider.co.uk/Team/Chelsea')">View Chelsea stats on FPL</a></p>
+        </article>
+
+        <article class="team">
+            <h3>Arsenal</h3>
+            <p>Arsenal, also known as the Gunners, is known for their attractive, attacking style of play. They have a rich history and have won numerous league titles and FA Cups, with a renewed focus on competing at the highest level.</p>
+            <p><strong>Key Players:</strong> Bukayo Saka, Martin Ødegaard, and Gabriel Jesus are vital, with Saka providing width and Ødegaard linking play in midfield. Arsenal's young core is promising, and they are looking to challenge for titles consistently.</p>
+            <p><a onclick="openFPL('https://fplinsider.co.uk/Team/Arsenal')">View Arsenal stats on FPL</a></p>
+        </article>
+
+        <article class="team">
+            <h3>Tottenham Hotspur</h3>
+            <p>Tottenham Hotspur, known as Spurs, is known for their exciting, attacking football. They have a strong fan base and have been competitive in both domestic and European competitions, aiming to secure silverware after years of near misses.</p>
+            <p><strong>Key Players:</strong> Son Heung-min, James Maddison, and Cristian Romero are key figures, with Son providing goals and Maddison creativity in attack. Spurs are focusing on building a cohesive unit that can challenge for top honors.</p>
+            <p><a onclick="openFPL('https://fplinsider.co.uk/Team/Spurs')">View Tottenham Hotspur stats on FPL</a></p>
+        </article>
+
+        <div id="b">
+            <h3>Looking to pick a player for your team? Choose from the best of each.</h3>
+            <img id="playerImg" src="salah.jpg" alt="Player Image" title="Player Image"/>
+            <button id="startStopButton" onclick="startStopSlides()">Start</button>
+        </div>
+    </main>
+
+    <script type="text/javascript">
+        function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        function openFPL(url) {
+            window.open(url, 'FPL Stats', 'width=800,height=600');
+        }
+    </script>
+</body>
+</html>

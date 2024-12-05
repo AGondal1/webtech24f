@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+     <!-- Additional Comments -->
+    <!-- Point 1: If you hover over the banner on any page, the header will change to yellow. -->
+    <!-- Point 2: If you click on the header in the banner after hovering over it, the text will change to a fun fact about FPL. --> 
+    <!-- Point 3: The contact form in the Contact Us page has been validated. -->
+    <!-- Point 4: There is a slideshow at the bottom of the Team Deep Dive page. -->
+    <!-- Point 5: In the site map page, there is an animation of a ball moving towards a net. -->
+    <!-- Point 6: On the Tips page, there is an interactive box. -->
+    <!-- Point 7: At the bottom of the Guides page, there is a tool through which you can calculate points based on various parameters. -->
+    <!-- jQuery can be found on the About Us page with my image, and in the Credits page where you can see the images and animated text. -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Premier League Management - FPL Analysis</title>
+    <meta name="description" content="Explore Fantasy Premier League management tips, strategies, and insights to enhance your FPL experience. Join the fun and compete with friends!">
+    <meta name="keywords" content="Fantasy Premier League, FPL management, FPL tips, Premier League analysis, fantasy football strategies">
+    <link rel="stylesheet" href="fplstyles.css"> <!-- Link to external CSS -->
+    <meta name="author" content="Aaryan Gondal">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1A1A1A; 
+            color: #FFFFFF; 
+        }
+
+        #banner {
+            background-image: url('banner.jpg');
+            padding: 4%;
+            text-align: center;
+            background-color: #37003C; 
+        }
+
+        #heading {
+            color: #FFFFFF; 
+            font-weight: bold;
+        }
+    </style>
+    <script type="text/javascript" defer>
+        function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("heading").onmouseover = function() {
+                this.style.color = "gold";
+            };
+
+            document.getElementById("heading").onclick = function() {
+                this.textContent = "Enable notifications on your mobile device to get squad updates, scout reports and reminders for team deadlines!";
+            };
+        });
+    </script>
+</head>
+<body>
+    <div id="banner">
+        <h1 id="heading">FPL Management and Analysis</h1>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="topnav" id="mytopnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="teamdeepdive.html">Team Deep Dive</a>
+        <div class="dropdown">
+            <button class="dropdownbutton">Tips & Guides</button>
+            <div class="dropdowncontent">
+                <a href="tips.html">Tips</a>
+                <a href="guides.html">Guides</a>
+            </div>
+        </div>
+        <a href="opinioncolumn.html">Opinion Column</a>
+        <a href="contactus.html">Contact Us</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="sitemap.html">Sitemap</a>
+        <a href="credits.html">Credits</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">☰</a>
+    </div>
+
+    <div class="content">
+        <h2>Welcome to FPL Management and Analysis</h2>
+        <p>Fantasy Premier League (FPL) is a virtual game where participants assemble an imaginary team of real-life players from the Premier League and score points based on those players' actual performances in league matches. It's a fun and engaging way to test your football knowledge and compete with friends and other football fans around the world.</p>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-7wWXk7QogI?si=U-1gYVSOi7_uDMIT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p>Explore our <a href="opinioncolumn.html">Opinion Column</a> for insights and tips from FPL enthusiasts, or get in touch with us through our <a href="contact-us.html">Contact Us</a> page.</p>
+    </div>
+    
+    <!-- Background Music -->
+    <audio autoplay controls loop>
+        <source src="premierleague.mp3" type="audio/mp3"/>
+    </audio>
+
+    <script type="text/javascript">
+        function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+</html>
