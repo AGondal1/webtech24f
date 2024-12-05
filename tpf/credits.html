@@ -47,9 +47,10 @@
             margin: 20px 0;
         }
     </style>
-    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
     <script type="text/javascript" src="jquery.cycle.all.js"></script>
     <script type="text/javascript" src="jquery.easing.js"></script>
+    <script type="text/javascript" src="jquery.animateTyping.js"></script>
     <script type="text/javascript" defer>
         function myFunction() {
             var x = document.getElementById("mytopnav");
@@ -60,7 +61,7 @@
             }
         }
 
-        $(function() {
+        $(document).ready(function() {
             $('#slider').cycle({
                 fx: 'shuffle',
                 shuffle: { top: 230, left: 230 },
@@ -125,7 +126,6 @@
             <img src="barca.jpg" alt="FC Barcelona" title="FC Barcelona">
             <img src="messi.jpg" alt="Lionel Messi" title="Lionel Messi">
         </div>
-        <script type="text/javascript" src="jquery.animateTyping.js"></script>
         <h2>Honors Code Statement</h2>
         <p>
             I Aaryan Gondal pledge my honor that I have neither received nor provided unauthorized assistance during the completion of this work. I have read the term project instructions and have observed all the restrictions and limitations specified therein.
